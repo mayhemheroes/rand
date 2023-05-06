@@ -57,6 +57,7 @@ jobs:
         - fuzz/mayhemfiles/Mayhemfile_chacha
         - fuzz/mayhemfiles/Mayhemfile_chacha12
         - fuzz/mayhemfiles/Mayhemfile_chacha8
+        - fuzz/mayhemfiles/Mayhemfile_distributions
     steps:
     - uses: actions/checkout@v3
     - name: Start analysis for ${{ matrix.mayhemfile }}
