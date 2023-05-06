@@ -1,0 +1,37 @@
+[package]
+name = "rand-fuzz"
+version = "0.1.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.rand_chacha]
+path = "../rand_chacha"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "chacha"
+path = "fuzz_targets/chacha.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "chacha12"
+path = "fuzz_targets/chacha12.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "chacha8"
+path = "fuzz_targets/chacha8.rs"
+test = false
+doc = false

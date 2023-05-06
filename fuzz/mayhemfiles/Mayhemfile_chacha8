@@ -1,0 +1,7 @@
+project: rand
+target: chacha8
+duration: 90
+
+cmds:
+    - cmd: /chacha8
+
