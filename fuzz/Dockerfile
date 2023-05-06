@@ -23,3 +23,5 @@ COPY --from=builder /rand/fuzz/target/x86_64-unknown-linux-gnu/release/chacha /
 COPY --from=builder /rand/fuzz/target/x86_64-unknown-linux-gnu/release/chacha12 /
 
 COPY --from=builder /rand/fuzz/target/x86_64-unknown-linux-gnu/release/chacha8 /
+
+COPY --from=builder /rand/fuzz/target/x86_64-unknown-linux-gnu/release/distributions /

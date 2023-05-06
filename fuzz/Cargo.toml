@@ -10,9 +10,13 @@ cargo-fuzz = true
 
 [dependencies]
 libfuzzer-sys = "0.4"
+rand = "0.8.5"
 
 [dependencies.rand_chacha]
 path = "../rand_chacha"
+
+[dependencies.rand_distr]
+path = "../rand_distr"
 
 # Prevent this from interfering with workspaces
 [workspace]
@@ -33,5 +37,11 @@ doc = false
 [[bin]]
 name = "chacha8"
 path = "fuzz_targets/chacha8.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "distributions"
+path = "fuzz_targets/distributions.rs"
 test = false
 doc = false
